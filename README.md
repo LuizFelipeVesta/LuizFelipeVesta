@@ -38,3 +38,6 @@ Scalable software and automation systems.
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=LuizFelipeVesta" />
 </p>
+## Contribution Graph
+
+![Snake animation](https://github.com/LuizFelipeVesta/LuizFelipeVesta/blob/output/github-contribution-grid-snake.svg)

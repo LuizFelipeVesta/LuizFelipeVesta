@@ -1,16 +1,25 @@
-## Hi there 👋
+# Hi, I'm Luiz Felipe 
 
-<!--
-**LuizFelipeVesta/LuizFelipeVesta** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Full Stack Engineer building scalable SaaS, intelligent automation and AI solutions.
 
-Here are some ideas to get you started:
+## Tech Stack
+- Python
+- Flask
+- PostgreSQL
+- APIs & Integrations
+- Automation
+- AI Engineering
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Featured Projects
+- AI Recruitment Automation Platform
+- SaaS Resource Allocation System
+- Quant Backtesting Engine
+
+## Architecture Interests
+- Distributed Systems
+- System Design
+- Automation Agents
+- Scalable Backend Engineering
+
+## Currently Building
+Scalable software and automation systems.

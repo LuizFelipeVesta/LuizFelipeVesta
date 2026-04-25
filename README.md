@@ -5,6 +5,7 @@ Full Stack Engineer building scalable SaaS, intelligent automation and AI soluti
 ## Tech Stack
 - Python
 - Flask
+- Django
 - PostgreSQL
 - APIs & Integrations
 - Automation

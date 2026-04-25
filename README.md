@@ -30,3 +30,5 @@ Scalable software and automation systems.
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LuizFelipeVesta&show_icons=true)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=LuizFelipeVesta&layout=compact)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=LuizFelipeVesta)

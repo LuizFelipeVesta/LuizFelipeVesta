@@ -24,3 +24,9 @@ Full Stack Engineer building scalable SaaS, intelligent automation and AI soluti
 
 ## Currently Building
 Scalable software and automation systems.
+
+## GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LuizFelipeVesta&show_icons=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=LuizFelipeVesta&layout=compact)

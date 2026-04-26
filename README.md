@@ -1,14 +1,24 @@
-# Hi, I'm Luiz Felipe
+<h1 align="center">Hi, I'm Luiz Felipe 👨‍💻</h1>
 
-**Full Stack Engineer** architecting scalable SaaS, intelligent automation and AI systems.
+<h3 align="center">Full Stack Engineer — SaaS · Automation · AI Systems</h3>
+
+<div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/luizfelipevesta)
 [![Website](https://img.shields.io/badge/Website-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://weblyrh.com.br)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LuizFelipeVesta)
 
+</div>
+
 ---
 
-## Tech Stack
+<div align="center">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHRsc2VmY2dyNXE5eDRsYnFucHl5NzF0bWN1NzJvNWh1d2xlNDU0OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/go3pCPP4899Jd3xb4p/giphy.gif" width="100%"/>
+</div>
+
+---
+
+## 🛠️ Tech Stack
 
 ### Backend
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -48,7 +58,7 @@
 
 ---
 
-## Featured Projects
+## 🚀 Featured Projects
 
 | Project | Description | Stack |
 |---|---|---|
@@ -58,17 +68,17 @@
 
 ---
 
-## Architecture Interests
-- Production SaaS & Multi-tenant Systems  
-- Distributed Systems & System Design  
-- Automation Pipelines & Scheduled Jobs  
-- Scalable Backend Engineering  
-- Security, Encryption & Rate Limiting  
-- Quantitative Finance & Algorithmic Trading  
+## 🧠 Architecture Interests
+- Production SaaS & Multi-tenant Systems
+- Distributed Systems & System Design
+- Automation Pipelines & Scheduled Jobs
+- Scalable Backend Engineering
+- Security, Encryption & Rate Limiting
+- Quantitative Finance & Algorithmic Trading
 
 ---
 
-## GitHub Stats
+## 📊 GitHub Stats
 
 <div align="center">
 
@@ -88,14 +98,12 @@
 
 ---
 
-## Currently Building
+## ⚡ Currently Building
 
 > Production-grade recruitment infrastructure, intelligent automation systems and quantitative trading research.
 
 ---
 
 <div align="center">
-
-<img src="https://komarev.com/ghpvc/?username=LuizFelipeVesta&color=blueviolet&style=for-the-badge" />
-
+  <img src="https://komarev.com/ghpvc/?username=LuizFelipeVesta&color=blueviolet&style=for-the-badge" />
 </div>

@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Luiz Felipe 👨‍💻</h1>
+<h1 align="center">Hi, I'm Luiz Felipe </h1>
 
 <h3 align="center">Full Stack Engineer — SaaS · Automation · AI Systems</h3>
 

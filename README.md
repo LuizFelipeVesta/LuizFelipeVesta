@@ -58,7 +58,7 @@
 | Project | Description | Stack |
 |---|---|---|
 | **Webly — Recruitment Platform** | B2B SaaS for intelligent recruitment with candidate kanban, client portal, onboarding pipeline and talent bank. Features connection pooling, CSRF protection, field encryption and automated emails at every stage of the hiring process. | Python, Flask, PostgreSQL, Cloudflare R2, APScheduler, Render |
-| 📊 **Quant Backtesting Engine** | Backtesting engine for WINFUT futures with ML-based strategy evaluation | Python, pandas, openpyxl |
+| **Quant Backtesting Engine** | Backtesting engine for WINFUT futures with ML-based strategy evaluation | Python, pandas, openpyxl |
 
 ---
 

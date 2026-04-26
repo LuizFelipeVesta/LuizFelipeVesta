@@ -8,7 +8,7 @@
 
 ---
 
-##  Tech Stack
+## Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
@@ -35,14 +35,14 @@
 
 ##  Architecture Interests
 
-- ⚡ Distributed Systems & System Design
-- 🤖 Automation Agents & AI Engineering
-- 🏗️ Scalable Backend Engineering
-- 📊 Quantitative Finance & Algorithmic Trading
+- Distributed Systems & System Design
+- Automation Agents & AI Engineering
+- Scalable Backend Engineering
+- Quantitative Finance & Algorithmic Trading
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <div align="center">
 
@@ -56,7 +56,7 @@
 
 ---
 
-## 🔧 Currently Building
+## Currently Building
 
 > Scalable software, automation systems, and quantitative trading strategies.
 

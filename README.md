@@ -1,4 +1,4 @@
-# Hi, I'm Luiz Felipe
+# Hi, I'm Luiz Felipe 
 
 **Full Stack Engineer** building scalable SaaS, intelligent automation and AI solutions.
 
@@ -8,7 +8,7 @@
 
 ---
 
-## Tech Stack
+##  Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
@@ -23,26 +23,26 @@
 
 ---
 
-## Featured Projects
+##  Featured Projects
 
 | Project | Description | Stack |
 |---|---|---|
-| **AI Recruitment Automation Platform** | Plataforma SaaS de recrutamento com IA | Python, Flask, PostgreSQL |
-| **SaaS Resource Allocation System** | Sistema de gestão de recursos com dashboard | Flask, Bootstrap, SQLite/PostgreSQL |
-| **Quant Backtesting Engine** | Engine de backtesting para WINFUT com ML | Python, pandas, openpyxl |
+|  **AI Recruitment Automation Platform** | Plataforma SaaS de recrutamento com IA | Python, Flask, PostgreSQL |
+|  **SaaS Resource Allocation System** | Sistema de gestão de recursos com dashboard | Flask, Bootstrap, PostgreSQL |
+|  **Quant Backtesting Engine** | Engine de backtesting para WINFUT com ML | Python, pandas, openpyxl |
 
 ---
 
-## Architecture Interests
+##  Architecture Interests
 
-- Distributed Systems & System Design
-- Automation Agents & AI Engineering
-- Scalable Backend Engineering
-- Quantitative Finance & Algorithmic Trading
+- ⚡ Distributed Systems & System Design
+- 🤖 Automation Agents & AI Engineering
+- 🏗️ Scalable Backend Engineering
+- 📊 Quantitative Finance & Algorithmic Trading
 
 ---
 
-## GitHub Stats
+## 📊 GitHub Stats
 
 <div align="center">
 
@@ -56,7 +56,7 @@
 
 ---
 
-## Currently Building
+## 🔧 Currently Building
 
 > Scalable software, automation systems, and quantitative trading strategies.
 

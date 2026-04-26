@@ -10,34 +10,64 @@
 
 ## Tech Stack
 
+**Backend**
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Gunicorn](https://img.shields.io/badge/Gunicorn-499848?style=for-the-badge&logo=gunicorn&logoColor=white)
+![APScheduler](https://img.shields.io/badge/APScheduler-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+**Database & Storage**
+
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Cloudflare R2](https://img.shields.io/badge/Cloudflare_R2-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Amazon S3](https://img.shields.io/badge/Amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
+
+**Security**
+
+![CSRF Protection](https://img.shields.io/badge/CSRF_Protection-000000?style=for-the-badge&logo=letsencrypt&logoColor=white)
+![Fernet Encryption](https://img.shields.io/badge/Fernet_Encryption-FF6B6B?style=for-the-badge&logo=gnuprivacyguard&logoColor=white)
+
+**Frontend**
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white)
+
+**Infra & DevOps**
+
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![REST APIs](https://img.shields.io/badge/REST_APIs-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+**Data & Automation**
+
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Boto3](https://img.shields.io/badge/Boto3-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![SMTP](https://img.shields.io/badge/SMTP_Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)
 
 ---
 
-##  Featured Projects
+## Featured Projects
 
 | Project | Description | Stack |
 |---|---|---|
-|  **AI Recruitment Automation Platform** | Plataforma SaaS de recrutamento com IA | Python, Flask, PostgreSQL |
-|  **SaaS Resource Allocation System** | Sistema de gestão de recursos com dashboard | Flask, Bootstrap, PostgreSQL |
-|  **Quant Backtesting Engine** | Engine de backtesting para WINFUT com ML | Python, pandas, openpyxl |
+| **Webly — Recruitment Platform** | B2B SaaS for intelligent recruitment with candidate kanban, client portal, onboarding pipeline and talent bank. Features connection pooling, CSRF protection, field encryption and automated emails at every stage of the hiring process. | Python, Flask, PostgreSQL, Cloudflare R2, APScheduler, Render |
+| 📊 **Quant Backtesting Engine** | Backtesting engine for WINFUT futures with ML-based strategy evaluation | Python, pandas, openpyxl |
 
 ---
 
-##  Architecture Interests
+## Architecture Interests
 
-- Distributed Systems & System Design
-- Automation Agents & AI Engineering
-- Scalable Backend Engineering
+- Production SaaS & Multi-tenant Systems
+- Automation Pipelines & Scheduled Jobs
+- Scalable Backend Engineering & Connection Pooling
+- Security: CSRF, Encryption, Rate Limiting
 - Quantitative Finance & Algorithmic Trading
 
 ---
@@ -58,7 +88,7 @@
 
 ## Currently Building
 
-> Scalable software, automation systems, and quantitative trading strategies.
+> Production-grade recruitment infrastructure, automation systems and quantitative trading strategies.
 
 ---
 

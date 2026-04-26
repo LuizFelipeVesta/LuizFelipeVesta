@@ -76,8 +76,6 @@
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=LuizFelipeVesta&theme=tokyonight&hide_border=true"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LuizFelipeVesta&layout=compact&theme=tokyonight&hide_border=true"/>
-
 </div>
 
 ---

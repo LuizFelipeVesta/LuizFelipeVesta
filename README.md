@@ -10,7 +10,7 @@
 
 </div>
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Backend
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -50,7 +50,7 @@
 
 ---
 
-## 🚀 Featured Projects
+##  Featured Projects
 
 | Project | Description | Stack |
 |---|---|---|
@@ -60,7 +60,7 @@
 
 ---
 
-## 🧠 Architecture Interests
+##  Architecture Interests
 - Production SaaS & Multi-tenant Systems
 - Distributed Systems & System Design
 - Automation Pipelines & Scheduled Jobs
@@ -70,7 +70,7 @@
 
 ---
 
-## 📊 GitHub Stats
+##  GitHub Stats
 
 <div align="center">
 
@@ -90,7 +90,7 @@
 
 ---
 
-## ⚡ Currently Building
+##  Currently Building
 
 > Production-grade recruitment infrastructure, intelligent automation systems and quantitative trading research.
 

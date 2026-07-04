@@ -104,7 +104,7 @@
 
 ## ⚡ Currently Building
 
-> Production-grade recruitment infrastructure, intelligent automation systems and quantitative trading research.
+> Building **Gerenciei** (SME SaaS with WhatsApp automation) and **MIRA** (AI real estate assistant), while researching quantitative trading strategies with Vesta.
 
 ---
 

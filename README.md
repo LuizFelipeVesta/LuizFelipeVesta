@@ -112,7 +112,7 @@
 
 ## ⚡ Currently Building
 
-> Building **Gerenciei** (SME SaaS with WhatsApp automation) and **MIRA** (AI real estate assistant), while researching quantitative trading strategies with Vesta.
+> Building **Gerenciei** (SME SaaS with WhatsApp automation), **MIRA** (AI real estate assistant) and **BoeMyo** (experience discovery platform for Lisbon), while researching quantitative trading strategies with Vesta.
 
 ---
 

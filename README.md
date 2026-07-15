@@ -67,6 +67,7 @@
 | **MIRA** | WhatsApp real estate assistant with LLM-powered region analysis using Google Places data. | FastAPI, Node.js/Baileys, Google Places, LLM |
 | **Bridge Sec** | CRM for distressed assets with automated judicial scraping from DataJud, eSAJ and PJe. | Django, Celery, Redis, Playwright |
 | **Vesta** | Quantitative trading analytics engine: win rate, payoff, drawdown, Sharpe ratio and capital curve visualization. | Python, Pandas, Matplotlib, Seaborn |
+| **BoeMyo** | Experience discovery platform for places starting with Lisbon — real catalog via OpenStreetMap, check-ins, moments and recommendations. | React 19, TypeScript, tRPC, PostgreSQL/PostGIS, Drizzle ORM |
 
 ---
 

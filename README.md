@@ -10,7 +10,7 @@
 
 </div>
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -67,7 +67,7 @@
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 | Project | Description | Stack |
 |---|---|---|
@@ -80,7 +80,7 @@
 
 ---
 
-## 🧠 Architecture Interests
+## Architecture Interests
 - Production SaaS & Multi-tenant Systems
 - Distributed Systems & System Design
 - Event-driven Architecture & Outbox Pattern
@@ -92,7 +92,7 @@
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <div align="center">
 
@@ -110,7 +110,7 @@
 
 ---
 
-## ⚡ Currently Building
+## Currently Building
 
 > Building **Gerenciei** (SME SaaS with WhatsApp automation), **MIRA** (AI real estate assistant) and **BoeMyo** (experience discovery platform for Lisbon), while researching quantitative trading strategies with Vesta.
 

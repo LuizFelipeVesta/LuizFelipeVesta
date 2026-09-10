@@ -1,6 +1,7 @@
 name: Cartão do perfil
 
-# Regera o cartão todos os dias: o "Uptime" avança e as estatísticas mudam.
+# Regera o cartão todos os dias. O que muda é o "Uptime", que avança uma vez
+# por mês; nos outros dias não há diferença e não se faz commit nenhum.
 on:
   schedule:
     - cron: "0 6 * * *"   # 03:00 em São Paulo
@@ -23,17 +24,10 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Sem token: o cartão já não tem estatísticas do GitHub, que eram o
+      # único motivo para ler os repositórios privados. O gerador só usa a
+      # biblioteca padrão do Python e não acede à rede.
       - name: Gerar os SVGs
-        env:
-          # Token "classic" criado por você, com os escopos `repo`,
-          # `read:org` e `read:user`. Tem de ser classic: um token
-          # fine-grained pertence a um único dono e não enxergaria o
-          # repositório da organização boeMyo. O GITHUB_TOKEN padrão também
-          # não serve, porque só vê este repositório. O `gh` (já instalado no
-          # runner) lê esta variável sozinho.
-          GH_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
-          # Falha alto em vez de publicar um cartão com "…" nas estatísticas.
-          CARTAO_ESTRITO: "1"
         run: python gerar_cartao.py
 
       - name: Commit se o cartão mudou

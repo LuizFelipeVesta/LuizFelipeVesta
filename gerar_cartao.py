@@ -12,23 +12,14 @@ da largura real da fonte:
   - chave + pontos sao esticados ate essa coluna com `textLength`;
   - as reguas sao <line>, nao caracteres "─".
 
-Estatisticas: lidas com o `gh` CLI, que usa o token do ambiente (GH_TOKEN na
-GitHub Action, a sessao do `gh auth login` localmente). O script nunca le nem
-escreve o token. So TOTAIS vao para o cartao -- nenhum nome de repositorio.
+Links: dentro de um SVG mostrado como <img> nao sao clicaveis, por isso os
+contatos daqui sao so texto e o README tem uma linha de links por baixo.
 
-Porque os commits NAO vem de `contributionsCollection.totalCommitContributions`:
-esse campo so soma os repositorios publicos e poe todo o trabalho privado em
-`restrictedContributionsCount`, sem distinguir commits de issues ou PRs.
-Medido na primeira versao: dava 38 commits, quando so a MIRA tem 451 do
-Luiz. Por isso os commits contam-se repositorio a repositorio, filtrados
-pelo autor -- o que tambem deixa de fora os commits de colaboradores.
+Nao ha estatisticas do GitHub neste cartao (pedido do cliente). Enquanto
+existiram, eram o unico motivo para a Action precisar de um token com
+leitura dos repositorios privados; sairam juntas.
 """
-import json
-import os
-import subprocess
-import sys
-import time
-from datetime import date, datetime, timezone
+from datetime import date
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -68,13 +59,6 @@ CONTATO = [
     ("GitHub", "github.com/LuizFelipeVesta"),
 ]
 
-ESTATISTICAS_INDISPONIVEIS = [
-    ("Repositórios", "…"),
-    ("Commits", "…"),
-    ("Contribuições", "…"),
-    ("Linhas de código", "…"),
-]
-
 # --- Geometria -------------------------------------------------------------
 FONTE = 15
 LINHA = 21
@@ -103,122 +87,6 @@ TEMAS = {
 }
 
 
-# --- Estatisticas ------------------------------------------------------------
-Q_VIEWER = "query { viewer { login createdAt } }"
-Q_REPOS = """
-query($cursor: String) {
-  viewer {
-    repositories(first: 100, after: $cursor,
-                 ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]) {
-      totalCount
-      nodes { nameWithOwner }
-      pageInfo { hasNextPage endCursor }
-    }
-  }
-}"""
-# O total do calendario e o numero "X contribuicoes" do perfil: inclui o
-# trabalho privado quando a opcao "Private contributions" esta ligada.
-Q_CALENDARIO = """
-query($de: DateTime!, $ate: DateTime!) {
-  viewer {
-    contributionsCollection(from: $de, to: $ate) {
-      contributionCalendar { totalContributions }
-    }
-  }
-}"""
-
-
-def gh(args: list[str]) -> subprocess.CompletedProcess:
-    return subprocess.run(["gh", "api", *args], capture_output=True, text=True,
-                          encoding="utf-8", timeout=120)
-
-
-def gh_json(args: list[str]):
-    r = gh(args)
-    if r.returncode != 0:
-        raise RuntimeError(f"gh api {args[0]}: {r.stderr.strip()[:200]}")
-    return json.loads(r.stdout) if r.stdout.strip() else None
-
-
-def graphql(query: str, **variaveis):
-    args = ["graphql", "-f", f"query={query}"]
-    for chave, valor in variaveis.items():
-        args += ["-F", f"{chave}={'null' if valor is None else valor}"]
-    return gh_json(args)["data"]
-
-
-def fmt(n: int) -> str:
-    return f"{n:,}".replace(",", ".")
-
-
-def commits_do_autor(nwo: str, login: str) -> int:
-    r = gh([f"repos/{nwo}/commits?author={login}&per_page=100", "--paginate", "--jq", "length"])
-    if r.returncode != 0:
-        if "empty" in r.stderr.lower():  # 409: repositorio sem nenhum commit
-            return 0
-        raise RuntimeError(f"commits de {nwo}: {r.stderr.strip()[:200]}")
-    return sum(int(x) for x in r.stdout.split())
-
-
-def linhas_do_autor(nwo: str, login: str) -> tuple[int, int]:
-    contribuidores = None
-    for _ in range(8):
-        contribuidores = gh_json([f"repos/{nwo}/stats/contributors"])
-        # 202 devolve {} enquanto o GitHub calcula; 204 (repo vazio) devolve nada.
-        if not isinstance(contribuidores, dict):
-            break
-        time.sleep(3)
-    adicoes = remocoes = 0
-    if isinstance(contribuidores, list):
-        for c in contribuidores:
-            if ((c.get("author") or {}).get("login") or "").lower() == login.lower():
-                for semana in c.get("weeks", []):
-                    adicoes += semana.get("a", 0)
-                    remocoes += semana.get("d", 0)
-    return adicoes, remocoes
-
-
-def estatisticas() -> list[tuple[str, str]]:
-    viewer = graphql(Q_VIEWER)["viewer"]
-    login, criado = viewer["login"], viewer["createdAt"]
-
-    repos, cursor, total = [], None, 0
-    while True:
-        dados = graphql(Q_REPOS, cursor=cursor)["viewer"]["repositories"]
-        total = dados["totalCount"]
-        repos += [n["nameWithOwner"] for n in dados["nodes"]]
-        if not dados["pageInfo"]["hasNextPage"]:
-            break
-        cursor = dados["pageInfo"]["endCursor"]
-
-    # contributionsCollection aceita no maximo um ano por consulta.
-    agora = datetime.now(timezone.utc)
-    contribuicoes = 0
-    for ano in range(int(criado[:4]), agora.year + 1):
-        de = criado if ano == int(criado[:4]) else f"{ano}-01-01T00:00:00Z"
-        if ano == agora.year:
-            ate = agora.strftime("%Y-%m-%dT%H:%M:%SZ")
-        else:
-            ate = f"{ano}-12-31T23:59:59Z"
-        colecao = graphql(Q_CALENDARIO, de=de, ate=ate)["viewer"]["contributionsCollection"]
-        contribuicoes += colecao["contributionCalendar"]["totalContributions"]
-
-    commits = adicoes = remocoes = 0
-    for nwo in repos:
-        commits += commits_do_autor(nwo, login)
-        a, d = linhas_do_autor(nwo, login)
-        adicoes += a
-        remocoes += d
-
-    return [
-        ("Repositórios", fmt(total)),
-        ("Commits", fmt(commits)),
-        ("Contribuições", fmt(contribuicoes)),
-        ("Linhas de código", f"{fmt(adicoes - remocoes)} (+{fmt(adicoes)} / −{fmt(remocoes)})"),
-    ]
-
-
-# --- Layout ------------------------------------------------------------------
 def uptime(hoje: date) -> str:
     meses = (hoje.year - INICIO_CARREIRA.year) * 12 + hoje.month - INICIO_CARREIRA.month
     anos, resto = divmod(meses, 12)
@@ -239,7 +107,7 @@ def quebrar(valor: str, largura: int) -> list[str]:
     return linhas
 
 
-def montar(hoje: date, stats: list[tuple[str, str]]):
+def montar(hoje: date):
     el: list[dict] = []
     n = 0
 
@@ -269,9 +137,6 @@ def montar(hoje: date, stats: list[tuple[str, str]]):
         par(chave, valor)
     secao("Contato")
     for chave, valor in CONTATO:
-        par(chave, valor)
-    secao("GitHub Stats")
-    for chave, valor in stats:
         par(chave, valor)
     return el, n
 
@@ -323,19 +188,8 @@ def svg(tema: dict, elementos: list[dict], total_linhas: int) -> str:
 
 if __name__ == "__main__":
     hoje = date.today()
-    try:
-        stats = estatisticas()
-    except Exception as erro:  # noqa: BLE001
-        # Na Action (CARTAO_ESTRITO=1) falha alto: nao se publica um cartao
-        # degradado por causa de um token expirado. Localmente, segue com "…".
-        if os.environ.get("CARTAO_ESTRITO") == "1":
-            raise
-        print(f"aviso: estatisticas indisponiveis ({erro})", file=sys.stderr)
-        stats = ESTATISTICAS_INDISPONIVEIS
-    elementos, total = montar(hoje, stats)
+    elementos, total = montar(hoje)
     for nome, tema in TEMAS.items():
         (SAIDA / f"{nome}.svg").write_text(svg(tema, elementos, total), encoding="utf-8")
     altura = MARGEM_TOPO + (total - 1) * LINHA + 26
     print(f"cartao: {LARGURA}x{altura} | linhas: {total} | uptime: {uptime(hoje)}")
-    for chave, valor in stats:
-        print(f"  {chave}: {valor}")

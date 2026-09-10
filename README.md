@@ -22,51 +22,6 @@
 
 ---
 
-## Featured Projects
-
-| Project | Description | Stack |
-|---|---|---|
-| **Webly** | B2B SaaS for intelligent recruitment with candidate kanban, client portal, talent bank and automated workflows. | Flask, PostgreSQL, Cloudflare R2 |
-| **Gerenciei** | Multi-tenant SaaS for service-based SMEs: scheduling, team management, financials and WhatsApp automation. | FastAPI, PostgreSQL, WhatsApp API, Asaas |
-| **MIRA** | WhatsApp real estate assistant with LLM-powered region analysis using Google Places data. | FastAPI, Node.js/Baileys, Google Places, LLM |
-| **Bridge Sec** | CRM for distressed assets with automated judicial scraping from DataJud, eSAJ and PJe. | Django, Celery, Redis, Playwright |
-| **Vesta** | Quantitative trading analytics engine: win rate, payoff, drawdown, Sharpe ratio and capital curve visualization. | Python, Pandas, Matplotlib, Seaborn |
-| **BoeMyo** | Experience discovery platform for places starting with Lisbon — real catalog via OpenStreetMap, check-ins, moments and recommendations. | React 19, TypeScript, tRPC, PostgreSQL/PostGIS, Drizzle ORM |
-
----
-
-## Architecture Interests
-- Production SaaS & Multi-tenant Systems
-- Distributed Systems & System Design
-- Event-driven Architecture & Outbox Pattern
-- Automation Pipelines & Scheduled Jobs
-- Web Scraping & Legal Data Automation
-- Scalable Backend Engineering
-- Security, Encryption & Rate Limiting
-- Quantitative Finance & Algorithmic Trading
-
----
-
-## GitHub Stats
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LuizFelipeVesta/LuizFelipeVesta/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/LuizFelipeVesta/LuizFelipeVesta/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/LuizFelipeVesta/LuizFelipeVesta/output/github-contribution-grid-snake-dark.svg">
-</picture>
-
-</div>
-
----
-
-## Currently Building
-
-> Building **Gerenciei** (SME SaaS with WhatsApp automation), **MIRA** (AI real estate assistant) and **BoeMyo** (experience discovery platform for Lisbon), while researching quantitative trading strategies with Vesta.
-
----
-
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=LuizFelipeVesta&color=blueviolet&style=for-the-badge" />
 </div>

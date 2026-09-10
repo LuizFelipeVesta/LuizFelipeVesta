@@ -7,3 +7,11 @@
 </picture>
 
 </div>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/luiz-felipe-neves-443152215">LinkedIn</a>
+  ·
+  <a href="https://weit-are.com">Website</a>
+  ·
+  <a href="https://github.com/LuizFelipeVesta">GitHub</a>
+</p>

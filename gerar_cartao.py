@@ -64,6 +64,7 @@ COMPETENCIAS = [
 
 CONTATO = [
     ("LinkedIn", "linkedin.com/in/luiz-felipe-neves-443152215"),
+    ("Website", "weit-are.com"),
     ("GitHub", "github.com/LuizFelipeVesta"),
 ]
 

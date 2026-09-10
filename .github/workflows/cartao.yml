@@ -1,0 +1,45 @@
+name: Cartão do perfil
+
+# Regera o cartão todos os dias: o "Uptime" avança e as estatísticas mudam.
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 03:00 em São Paulo
+  workflow_dispatch:       # botão "Run workflow" para gerar na hora
+  push:
+    paths:
+      - gerar_cartao.py
+      - .github/workflows/cartao.yml
+
+permissions:
+  contents: write          # só para fazer commit dos SVGs neste repositório
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gerar os SVGs
+        env:
+          # Token "classic" criado por você, com os escopos `repo`,
+          # `read:org` e `read:user`. Tem de ser classic: um token
+          # fine-grained pertence a um único dono e não enxergaria o
+          # repositório da organização boeMyo. O GITHUB_TOKEN padrão também
+          # não serve, porque só vê este repositório. O `gh` (já instalado no
+          # runner) lê esta variável sozinho.
+          GH_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+          # Falha alto em vez de publicar um cartão com "…" nas estatísticas.
+          CARTAO_ESTRITO: "1"
+        run: python gerar_cartao.py
+
+      - name: Commit se o cartão mudou
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dark_mode.svg light_mode.svg
+          git diff --cached --quiet || git commit -m "chore: atualiza cartão do perfil"
+          git push
